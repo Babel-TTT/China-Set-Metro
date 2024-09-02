@@ -1,0 +1,9 @@
+.nmlcache
+.vscode
+*.grf
+*.tar
+chinasettrains-*
+.gfxhash/
+gfx/**/*.png
+!gfx/*.png
+*.zip
