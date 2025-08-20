@@ -1,9 +1,6 @@
 //3号线
 //折叠列表
-switch (FEAT_TRAINS, SELF, switch_beijing2_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
-    0: return string(STR_BEIJING);
-    return CB_RESULT_NO_TEXT;
-}
+
 
 spriteset (spriteset_beijing2_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("beijing_metro", "beijing2-c")
@@ -74,7 +71,7 @@ item (FEAT_TRAINS, beijing2) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
         engine_class:                   ENGINE_CLASS_ELECTRIC;
-        variant_group:					11000;
+        variant_group:					beijing1;
        
         
         // Availability
@@ -109,14 +106,14 @@ item (FEAT_TRAINS, beijing2) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3,string(STR_CHENGDU_CAN_ATTACH_WAGON),string(STR_B_WAGON),string(STR_3RD));
+        additional_text:                string(STR_DESC_3,string(STR_ATTACH_ELECTRIC),string(STR_B_WAGON),string(STR_3RD));
         can_attach_wagon:               AB3;
         start_stop:                     mu2to6car;
         // Graphics
         default:                        switch_beijing2_graphics;
         purchase:                       spriteset_beijing2_original;
         articulated_part:               switch_beijing2_articulated_part;
-        name:                           switch_beijing2_name;
+        name:                           switch_beijing_name;
         
 
         // Stats
@@ -130,7 +127,7 @@ item (FEAT_TRAINS, beijing2) {
         purchase_running_cost_factor:   20;
     }
        // Multiple Unit Wagons
-    livery_override(chengdu_car_ab3) {
+    livery_override(metro_car_3rd) {
         default:                        switch_beijing2_graphics;
         cargo_capacity:                 switch_beijing2_capacity;
         power:                          90;

@@ -1,9 +1,6 @@
 //6号线
 //折叠列表
-switch (FEAT_TRAINS, SELF, switch_chengdu6_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
-    0: return string(STR_ATTACH_ALL_CHENGDU_CAR);
-    return CB_RESULT_NO_TEXT;
-}
+
 
 spriteset (spriteset_chengdu6_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
     template_purchase ("chengdu_metro", "chengdu6-c")
@@ -114,7 +111,7 @@ item (FEAT_TRAINS, chengdu6) {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
         misc_flags:                     bitmask(TRAIN_FLAG_AUTOREFIT, TRAIN_FLAG_MU);
         engine_class:                   ENGINE_CLASS_ELECTRIC;
-        variant_group:					10011;
+        variant_group:					chengdu1_sfm06;
 
 
         // Availability
@@ -149,14 +146,14 @@ item (FEAT_TRAINS, chengdu6) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_2,string(STR_CHENGDU_CAN_ATTACH_WAGON),string(STR_8A_WAGON));
+        additional_text:                string(STR_DESC_2,string(STR_ATTACH_ELECTRIC),string(STR_8A_WAGON));
         can_attach_wagon:               AB;
         start_stop:                     mu2to8car;
         // Graphics
         default:                        switch_chengdu6_graphics;
         purchase:                       spriteset_chengdu6_original;
         articulated_part:               switch_chengdu6_articulated_part;
-        name:                           switch_chengdu6_name;
+        name:                           switch_chengdu_name;
 
 
         // Stats
@@ -170,7 +167,7 @@ item (FEAT_TRAINS, chengdu6) {
         purchase_running_cost_factor:   21;
     }
        // Multiple Unit Wagons
-    livery_override(chengdu_car_ab) {
+    livery_override(metro_car_elec) {
         default:                        switch_chengdu6_graphics;
         cargo_capacity:                 switch_chengdu6_capacity;
         power:                          127;
