@@ -30,7 +30,10 @@ switch (FEAT_TRAINS, SELF, switch_chengdu8_articulated_part, extra_callback_info
 
 
 //编组
-
+switch (FEAT_TRAINS, SELF, switch_chengdu8_graphics_front, position_in_articulated_veh % 3) {
+    1: spriteset_chengdu8_c_front;
+    empty_sprites;
+}
 
 
 switch (FEAT_TRAINS, SELF, switch_chengdu819_graphics, position_in_articulated_veh % 3) {
@@ -83,6 +86,11 @@ switch (FEAT_TRAINS, SELF, switch_chengdu8_graphics, num_vehs_in_consist) {
 }
 */
 //载客
+
+switch (FEAT_TRAINS, SELF, switch_chengdu8_capacity_front, position_in_articulated_veh % 3) {
+    1: return 280;
+    return 0;
+}
 
 switch (FEAT_TRAINS, SELF, switch_chengdu840_capacity,position_in_consist_from_end){
     1: return 280;
@@ -150,7 +158,7 @@ item (FEAT_TRAINS, chengdu8) {
         can_attach_wagon:               AB;
         start_stop:                     mu2to8car;
         // Graphics
-        default:                        switch_chengdu8_graphics;
+        default:                        switch_chengdu8_graphics_front;
         purchase:                       spriteset_chengdu8_original;
         articulated_part:               switch_chengdu8_articulated_part;
         name:                           switch_chengdu_name;
@@ -161,7 +169,8 @@ item (FEAT_TRAINS, chengdu8) {
         speed:                          80;
         tractive_effort_coefficient:    return 0;
         purchase_tractive_effort_coefficient: return int(0.171*255);
-        cargo_capacity:                 300/3;
+        cargo_capacity:                 switch_chengdu8_capacity_front;
+        purchase_cargo_capacity:        280/3;
         cargo_age_period:               140;
         cost_factor:                    25;
         purchase_running_cost_factor:   25;

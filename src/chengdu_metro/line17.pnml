@@ -30,7 +30,10 @@ switch (FEAT_TRAINS, SELF, switch_chengdu17_articulated_part, extra_callback_inf
 
 
 //编组
-
+switch (FEAT_TRAINS, SELF, switch_chengdu17_graphics_front, position_in_articulated_veh % 3) {
+    1: spriteset_chengdu17_c_front;
+    empty_sprites;
+}
 
 
 switch (FEAT_TRAINS, SELF, switch_chengdu1719_graphics, position_in_articulated_veh % 3) {
@@ -83,9 +86,13 @@ switch (FEAT_TRAINS, SELF, switch_chengdu17_graphics, num_vehs_in_consist) {
 }
 */
 //载客
+switch (FEAT_TRAINS, SELF, switch_chengdu17_capacity_front, position_in_articulated_veh % 3) {
+    1: return 265;
+    return 0;
+}
 
 switch (FEAT_TRAINS, SELF, switch_chengdu1740_capacity,position_in_consist_from_end){
-    1: return 250;
+    1: return 265;
     return 280;
 }
 switch (FEAT_TRAINS, SELF, switch_chengdu1720_capacity,position_in_consist){
@@ -120,7 +127,7 @@ item (FEAT_TRAINS, chengdu17) {
         model_life:                     60;
         retire_early:                   35;
         vehicle_life:                   35;
-        track_type:                     SABd;
+        track_type:                     SABA;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_PASSENGERS);
@@ -150,7 +157,7 @@ item (FEAT_TRAINS, chengdu17) {
         can_attach_wagon:               AB;
         start_stop:                     mu2to8car;
         // Graphics
-        default:                        switch_chengdu17_graphics;
+        default:                        switch_chengdu17_graphics_front;
         purchase:                       spriteset_chengdu17_original;
         articulated_part:               switch_chengdu17_articulated_part;
         name:                           switch_chengdu_name;
@@ -161,7 +168,8 @@ item (FEAT_TRAINS, chengdu17) {
         speed:                          140;
         tractive_effort_coefficient:    return 0;
         purchase_tractive_effort_coefficient: return int(0.181*255);
-        cargo_capacity:                 260/3;
+        purchase_cargo_capacity:        265/3;
+        cargo_capacity:                 switch_chengdu17_capacity_front;
         cargo_age_period:               160;
         cost_factor:                    35;
         purchase_running_cost_factor:   30;

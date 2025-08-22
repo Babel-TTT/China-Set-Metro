@@ -35,7 +35,7 @@ switch (FEAT_TRAINS, SELF, switch_chengdu_car3_graphics, position_in_articulated
 item (FEAT_TRAINS,metro_car_elec) {
     property {
         // Menu
-        name:                           string(STR_NAME_CHENGDU_CAR);
+        name:                           string(STR_NAME_CAR);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
 
         // Availability
@@ -91,7 +91,7 @@ item (FEAT_TRAINS,metro_car_elec) {
 item (FEAT_TRAINS,metro_car_3rd) {
     property {
         // Menu
-        name:                           string(STR_NAME_CHENGDU_CAR3);
+        name:                           string(STR_NAME_CAR3);
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
 
         // Availability

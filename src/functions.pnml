@@ -1,4 +1,5 @@
-//长度限制，对于6b车
+//长度限制
+//对于6b车
 switch (FEAT_TRAINS, SELF, mu2to6car, (num_vehs_in_consist < 6) || (num_vehs_in_consist > 18)) {
     1: return string(STR_MUST_BE_2_TO_6_CARS);
     return CB_RESULT_NO_TEXT;
@@ -6,6 +7,11 @@ switch (FEAT_TRAINS, SELF, mu2to6car, (num_vehs_in_consist < 6) || (num_vehs_in_
 //对于8编组
 switch (FEAT_TRAINS, SELF, mu2to8car, (num_vehs_in_consist < 6) || (num_vehs_in_consist > 24)) {
     1: return string(STR_MUST_BE_2_TO_8_CARS);
+    return CB_RESULT_NO_TEXT;
+}
+//3to12
+switch (FEAT_TRAINS, SELF, mu3to12car, (num_vehs_in_consist < 9) || (num_vehs_in_consist > 36)) {
+    1: return string(STR_MUST_BE_3_TO_12_CARS);
     return CB_RESULT_NO_TEXT;
 }
 
@@ -16,6 +22,10 @@ switch (FEAT_TRAINS, SELF, switch_length_2_5_2, position_in_articulated_veh % 3)
 }
 switch (FEAT_TRAINS, SELF, switch_length_2_7_2, position_in_articulated_veh % 3) {
     1: return 7;
+    return 2;
+}
+switch (FEAT_TRAINS, SELF, switch_length_2_8_2, position_in_articulated_veh % 3) {
+    1: return 8;
     return 2;
 }
 
