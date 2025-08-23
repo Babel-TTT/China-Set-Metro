@@ -120,7 +120,7 @@ item (FEAT_TRAINS, beijing2) {
         can_attach_wagon:               AB3;
         start_stop:                     mu2to6car;
         // Graphics
-        default:                        switch_beijing2_graphics_front;
+        default:                        switch_beijing2_graphics_front ;
         purchase:                       spriteset_beijing2_original;
         articulated_part:               switch_beijing2_articulated_part;
         name:                           switch_beijing_name;
