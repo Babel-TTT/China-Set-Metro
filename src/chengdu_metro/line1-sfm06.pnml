@@ -128,7 +128,7 @@ item (FEAT_TRAINS, chengdu1_sfm06) {
         // Menu
         additional_text:                string(STR_DESC_3,string(STR_ATTACH_ELECTRIC),string(STR_6B_WAGON));
         can_attach_wagon:               AB;
-        start_stop:                     mu2to6car;
+        start_stop:                     mu3to12car;
         // Graphics
         default:                        switch_sfm06_graphics_front;
         purchase:                       spriteset_chengdu1_smf06_original;

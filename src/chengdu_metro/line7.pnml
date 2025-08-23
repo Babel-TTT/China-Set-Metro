@@ -154,7 +154,7 @@ item (FEAT_TRAINS, chengdu7) {
         // Menu
         additional_text:                string(STR_DESC_2,string(STR_ATTACH_ELECTRIC),string(STR_6A_WAGON));
         can_attach_wagon:               AB;
-        start_stop:                     mu2to6car;
+        start_stop:                     mu3to12car;
         // Graphics
         default:                        switch_chengdu7_graphics_front;
         purchase:                       spriteset_chengdu7_original;
