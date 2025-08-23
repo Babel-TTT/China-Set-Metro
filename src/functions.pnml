@@ -65,3 +65,15 @@ switch (FEAT_TRAINS, PARENT, cafedecayfactor, hasbit(bitmask_consist_info, 1)) {
     1: return 5;
     return 4;
 }
+
+//折叠菜单
+
+switch (FEAT_TRAINS, SELF, switch_beijing_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_BEIJING);
+    return CB_RESULT_NO_TEXT;
+}
+
+switch (FEAT_TRAINS, SELF, switch_guangzhou_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
+    0: return string(STR_GUANGZHOU);
+    return CB_RESULT_NO_TEXT;
+}

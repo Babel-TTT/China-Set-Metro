@@ -1,7 +1,7 @@
 //车厢
 item (FEAT_TRAINS, metro_car_elec, 1001) {}
 item (FEAT_TRAINS, metro_car_3rd, 1002) {}
-item (FEAT_TRAINS, metro_1st_car_elec, 1001) {}
+item (FEAT_TRAINS, metro_1st_car_elec, 1003) {}
 //北京 11xx-12xx
 item (FEAT_TRAINS, beijing1, 1101) {}
 item (FEAT_TRAINS, beijing2, 1102) {}
@@ -9,6 +9,8 @@ item (FEAT_TRAINS, beijing2, 1102) {}
 //广州&佛山 15xx-16xx
 item (FEAT_TRAINS, guangzhou_a1, 1501) {}
 item (FEAT_TRAINS, guangzhou_a2, 1502) {}
+item (FEAT_TRAINS, guangzhou_a4, 1503) {}
+item (FEAT_TRAINS, guangzhou_a6, 1504) {}
 //深圳&东莞 17xx-18xx
 //成都 19xx
 item (FEAT_TRAINS, chengdu1, 1900) {}
@@ -32,6 +34,10 @@ sort (FEAT_TRAINS, [
     1002,
     beijing1,
     beijing2,
+    guangzhou_a1,
+    guangzhou_a2,
+    guangzhou_a4,
+    guangzhou_a6,
     chengdu1_sfm06,
     chengdu1,
     chengdu2,

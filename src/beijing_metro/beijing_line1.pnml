@@ -1,22 +1,19 @@
-//3号线
+//1号线
 //折叠列表
-switch (FEAT_TRAINS, SELF, switch_beijing_name, getbits(extra_callback_info1, 0, 8) == 0x20? getbits(extra_callback_info1, 8, 8) : 0xFFFF) {
-    0: return string(STR_BEIJING);
-    return CB_RESULT_NO_TEXT;
-}
+
 
 spriteset (spriteset_beijing1_original, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_purchase ("beijing_metro", "beijing1-c")
+    template_purchase ("beijing_subway", "beijing1-c")
 }
 // Vehicle
 spriteset (spriteset_beijing1_c_front, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("beijing_metro", "beijing1-c")
+    template_standard ("beijing_subway", "beijing1-c")
 }
 spriteset (spriteset_beijing1_m, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("beijing_metro", "beijing1-m")
+    template_standard ("beijing_subway", "beijing1-m")
 }
 spriteset (spriteset_beijing1_cab, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-    template_standard ("beijing_metro", "beijing1-cr")
+    template_standard ("beijing_subway", "beijing1-cr")
 }
 switch (FEAT_TRAINS, SELF, switch_beijing1_articulated_part, extra_callback_info1) {
     1..2: return beijing1;
@@ -115,7 +112,7 @@ item (FEAT_TRAINS, beijing1) {
     }
     graphics {
         // Menu
-        additional_text:                string(STR_DESC_3,string(STR_ATTACH_ELECTRIC),string(STR_B_WAGON),string(STR_ELECTRIC_750V3RDR));
+        additional_text:                string(STR_DESC_3,string(STR_ATTACH_ELECTRIC),string(STR_6B_WAGON),string(STR_ELECTRIC_750V3RDR));
         can_attach_wagon:               AB3;
         start_stop:                     mu2to6car;
         // Graphics
