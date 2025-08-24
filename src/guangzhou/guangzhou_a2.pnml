@@ -52,7 +52,7 @@ switch (FEAT_TRAINS, SELF, switch_guangzhou_a2_graphics, position_in_articulated
 
 //载客
 switch (FEAT_TRAINS, SELF, switch_guangzhou_a2_capacity, position_in_articulated_veh % 3) {
-    1: return 280;
+    1: return 310;
     return 0;
 }
 
@@ -131,13 +131,14 @@ item (FEAT_TRAINS, guangzhou_a2) {
         cargo_capacity:                 switch_guangzhou_a2_capacity;
         speed:                          80;
         power:                          return 0;
-        purchase_power:                 return 4077; // HPI
+        purchase_power:                 return 4720; // HPI
         tractive_effort_coefficient:    return 0;
         purchase_tractive_effort_coefficient: return int(0.647*255);
         purchase_cargo_capacity:        310/3;
         cargo_age_period:               140;
         cost_factor:                    25;
         purchase_running_cost_factor:   25;
+        running_cost_factor:            25;
     }
        // Multiple Unit Wagons
     livery_override(metro_car_elec) {

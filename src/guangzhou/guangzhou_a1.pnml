@@ -41,7 +41,7 @@ switch (FEAT_TRAINS, SELF, switch_guangzhou_a1_graphics, position_in_articulated
 
 //载客
 switch (FEAT_TRAINS, SELF, switch_guangzhou_a1_capacity, position_in_articulated_veh % 3) {
-    1: return 280;
+    1: return 310;
     return 0;
 }
 
@@ -53,11 +53,11 @@ switch (FEAT_TRAINS, SELF, switch_guangzhou_a1_weight, position_in_vehid_chain_f
 
 switch (FEAT_TRAINS, SELF, switch_guangzhou_a1_power, position_in_vehid_chain_from_end / 3 + 1) {
     1: return 0;
-    return 1019;
+    return 1019;//760kw per m
 }
 
 switch (FEAT_TRAINS, SELF, switch_guangzhou_a1_traction, vehicle_is_potentially_powered) {
-    1: return int(0.149*255);//740kw per m
+    1: return int(0.149*255);
     return 0;
 }
 
@@ -125,8 +125,9 @@ item (FEAT_TRAINS, guangzhou_a1) {
         purchase_tractive_effort_coefficient: return int(0.694*255);
         purchase_cargo_capacity:        310/3;
         cargo_age_period:               140;
-        cost_factor:                    25;
+        cost_factor:                    30;
         purchase_running_cost_factor:   25;
+        running_cost_factor:            25;
     }
        // Multiple Unit Wagons
     livery_override(metro_car_elec) {
