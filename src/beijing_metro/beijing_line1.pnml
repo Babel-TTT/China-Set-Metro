@@ -48,7 +48,7 @@ switch (FEAT_TRAINS, SELF, switch_beijing1_graphics,position_in_consist){
 //载客
 switch (FEAT_TRAINS, SELF, switch_beijing1_capacity_front, position_in_articulated_veh % 3){
     1: return 230;
-    return 250;
+    return 0;
 }
 
 switch (FEAT_TRAINS, SELF, switch_beijing140_capacity,position_in_consist_from_end){
