@@ -2,6 +2,21 @@
 STR_GRF_NAME,China Set: Metros 0.22.0,中国包：地铁 0.22.0
 STR_GRF_DESC,{BLACK}CNSM is a collection of Chinese metro vehicles,{BLACK}中国地铁车辆合集{}{RED}在更新NewGRF前清注意最低兼容版本！不当更新可能造成存档损坏！
 STR_GRF_URL,//github.com/OpenTTD-China-Set/china-set-metro,
+STR_PARAM_PURCHASE_COST,Purchase costs,购买费用
+STR_PARAM_PURCHASE_COST_DESC,Adjust vehicle purchase costs. Default is 25%.,调整车辆购买费用。默认为25%。
+STR_PARAM_RUNNING_COST,Running costs,运营费用
+STR_PARAM_RUNNING_COST_DESC,Adjust vehicle running costs. Default is 25%.,调整车辆运营费用。默认为25%。
+STR_PARAM_DIVIDE_16,6.25%,
+STR_PARAM_DIVIDE_8,12.50%,
+STR_PARAM_DIVIDE_4,25%,
+STR_PARAM_DIVIDE_2,50%,
+STR_PARAM_NORMAL,100%,
+STR_PARAM_TIMES_2,200%,
+STR_PARAM_TIMES_4,400%,
+STR_PARAM_TIMES_8,800%,
+STR_PARAM_TIMES_16,1600%,
+STR_PARAM_CARGO_DECAY,Cargo age period,货物贬值周期
+STR_PARAM_CARGO_DECAY_DESC,"Adjust cargo age period (the ability of keeping freshness of cargo and comfort for passengers) of coaches and wagons. Default is 100%. Cargo age period varies, so that a passenger would usually pay more for their long journey in a soft sleeper coach than in a hard seat coach.",调整车厢的货物贬值周期（旅客舒适度/货物保鲜度）。默认为100%。货物贬值周期随车厢种类而有不同。
 STR_MUST_BE_2_TO_6_CARS,{RED}Must be 2 to 6 cars,{RED}最少2节最多6节车厢
 STR_MUST_BE_2_TO_8_CARS,{RED}Must be 2 to 8 cars,{RED}最少2节最多8节车厢
 STR_MUST_BE_3_TO_12_CARS,{RED}Must be 3 to 12 cars,{RED}车厢数量必须在3至12节之间
@@ -28,6 +43,7 @@ STR_6A_WAGON,{GOLD}A-Type Metro Train; 6 cars in standard,{GOLD}地铁A型列车
 STR_8A_WAGON,{GOLD}A-Type Metro Train; 8 cars in standard,{GOLD}地铁A型列车，标准编组8节
 STR_3B_WAGON,{GOLD}B-Type Metro Train; 3 cars in standard; can reconnect,{GOLD}地铁B型列车，标准编组3节，可重联
 STR_6B_WAGON,{GOLD}B-Type Metro Train; 6 cars in standard;,{GOLD}地铁B型列车，标准编组6节
+STR_8D_WAGON,{GOLD}D-Type Metro Train; 8 cars in standard,{GOLD}地铁D型列车，标准编组8节
 STR_LINEB_CAR,{YELLOW}CNSM MU wagon,{YELLOW}中国地铁包列车专用车厢
 STR_ATTACH_ELECTRIC,Can Attach overhead line powered Metro Trains,可匹配接触网供电地铁列车
 STR_ATTACH_1ST_ELECTRIC,Can Attach overhead line powered Metro Trains and Business-class Wagon,可匹配接触网供电地铁列车及商务座列车
@@ -66,12 +82,13 @@ STR_NAME_GUANGZHOU_A1,Guangzhou Metro Type A1,广州地铁A1型
 STR_NAME_GUANGZHOU_A2,Guangzhou Metro Type A2/A3,广州地铁A2/A3型
 STR_NAME_GUANGZHOU_A4,Guangzhou Metro Type A4/A5,广州地铁A4/A5型
 STR_NAME_GUANGZHOU_A6,Guangzhou Metro Type A6,广州地铁A6型
-STR_NAME_GUANGZHOU_B1,Guangzhou Metro Type B1,广州地铁B1型
+STR_NAME_GUANGZHOU_B1,Guangzhou Metro Type B1 (Whole Train),广州地铁B1型 (整列)
+STR_NAME_GUANGZHOU_B2,Guangzhou Metro Type B2/B4,广州地铁B2/B4型
 STR_NAME_GUANGZHOU_D1,Guangzhou Metro Type D1/D2,广州地铁D1/D2型
 STR_USEDLINE_GZ_A1,{BLACK}Used Line: Guangzhou Metro {YELLOW}Line 1,{BLACK}使用的线路: 广州地铁{YELLOW}1号线
 STR_USEDLINE_GZ_A2,{BLACK}Used Line: Guangzhou Metro {YELLOW}Line 1/{BLUE} Line 2/{LTBLUE} Line 8,{BLACK}使用的线路: 广州地铁{YELLOW}1号线、{BLUE}2号线、{LTBLUE}8号线
 STR_USEDLINE_GZ_A4,{BLACK}Used Line: Guangzhou Metro {BLUE}Line 2/{LTBLUE} Line 8,{BLACK}使用的线路: 广州地铁{BLUE}2号线、{LTBLUE}8号线
-STR_USEDLINE_GZ_A6,{BLACK}Used Line: Guangzhou Metro {LTBLUE}Line 8,{BLACK}使用的线路: 广州地铁{BLUE}2号线、{LTBLUE}8号线
+STR_USEDLINE_GZ_A6,{BLACK}Used Line: Guangzhou Metro {LTBLUE}Line 8,{BLACK}使用的线路: 广州地铁{LTBLUE}8号线
 STR_USEDLINE_GZ_B1,{BLACK}Used Line: Guangzhou Metro {ORANGE}Line 3,{BLACK}使用的线路: 广州地铁{ORANGE}3号线
 STR_USEDLINE_GZ_D1,{BLACK}Used Line: Guangzhou Metro {BLUE}Line 18/{ORANGE} LIne 22,{BLACK}使用的线路: 广州地铁{BLUE}18号线、{ORANGE}22号线
 #Livery,,

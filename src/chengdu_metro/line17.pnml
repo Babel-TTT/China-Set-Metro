@@ -139,7 +139,7 @@ item (FEAT_TRAINS, chengdu17) {
         ai_special_flag:                AI_FLAG_PASSENGER;
         cargo_capacity:                 1;
         loading_speed:                  70;
-        cargo_age_period:               120;
+        cargo_age_period:               160<< param_cargo_decay;
 
         // Stats
         speed:                          140 km/h;
@@ -170,7 +170,7 @@ item (FEAT_TRAINS, chengdu17) {
         purchase_tractive_effort_coefficient: return int(0.181*255);
         purchase_cargo_capacity:        265/3;
         cargo_capacity:                 switch_chengdu17_capacity_front;
-        cargo_age_period:               160;
+        cargo_age_period:               160<< param_cargo_decay;
         cost_factor:                    35;
         purchase_running_cost_factor:   30;
     }
@@ -183,7 +183,7 @@ item (FEAT_TRAINS, chengdu17) {
         length:                         switch_length_2_7_2;
         weight:                         return 35;
         can_attach_wagon:               AB;
-        cargo_age_period:               160;
+        cargo_age_period:               160<< param_cargo_decay;
         bitmask_vehicle_info:           0;
         articulated_part:               switch_chengdu_car_articulated_part;
         cost_factor:                    35;
