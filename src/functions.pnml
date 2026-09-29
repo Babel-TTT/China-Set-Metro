@@ -1,7 +1,7 @@
 //长度限制
 //对于6b车
-switch (FEAT_TRAINS, SELF, mu2to6car, (num_vehs_in_consist < 6) || (num_vehs_in_consist > 18)) {
-    1: return string(STR_MUST_BE_2_TO_6_CARS);
+switch (FEAT_TRAINS, SELF, mu3to6car, (num_vehs_in_consist < 9) || (num_vehs_in_consist > 18)) {
+    1: return string(STR_MUST_BE_3_TO_6_CARS);
     return CB_RESULT_NO_TEXT;
 }
 //对于8编组

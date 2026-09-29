@@ -17,7 +17,7 @@ STR_PARAM_TIMES_8,800%,
 STR_PARAM_TIMES_16,1600%,
 STR_PARAM_CARGO_DECAY,Cargo age period,货物贬值周期
 STR_PARAM_CARGO_DECAY_DESC,"Adjust cargo age period (the ability of keeping freshness of cargo and comfort for passengers) of coaches and wagons. Default is 100%. Cargo age period varies, so that a passenger would usually pay more for their long journey in a soft sleeper coach than in a hard seat coach.",调整车厢的货物贬值周期（旅客舒适度/货物保鲜度）。默认为100%。货物贬值周期随车厢种类而有不同。
-STR_MUST_BE_2_TO_6_CARS,{RED}Must be 2 to 6 cars,{RED}最少2节最多6节车厢
+STR_MUST_BE_3_TO_6_CARS,{RED}Must be 3 to 6 cars,{RED}最少3节最多6节车厢
 STR_MUST_BE_2_TO_8_CARS,{RED}Must be 2 to 8 cars,{RED}最少2节最多8节车厢
 STR_MUST_BE_3_TO_12_CARS,{RED}Must be 3 to 12 cars,{RED}车厢数量必须在3至12节之间
 STR_ELECTRIC_25KVAC,{BLACK}Power: {RED}25kV AC {LTBLUE}(Overhead Lines),{BLACK}供电方式:{RED}25kV交流{LTBLUE}(接触网)
