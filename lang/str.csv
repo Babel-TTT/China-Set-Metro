@@ -1,5 +1,5 @@
 ﻿#STRING,ENGLISH,SIMPLIFIED CHINESE
-STR_GRF_NAME,China Set: Metros 0.22.0,中国包：地铁 0.22.0
+STR_GRF_NAME,China Set: Metros 0.23.0,中国包：地铁 0.23.0
 STR_GRF_DESC,{BLACK}CNSM is a collection of Chinese metro vehicles,{BLACK}中国地铁车辆合集{}{RED}在更新NewGRF前清注意最低兼容版本！不当更新可能造成存档损坏！
 STR_GRF_URL,//github.com/OpenTTD-China-Set/china-set-metro,
 STR_PARAM_PURCHASE_COST,Purchase costs,购买费用
