@@ -65,7 +65,7 @@ item (FEAT_TRAINS,metro_car_elec) {
         introduction_date:              date(1960,01,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
-        track_type:                     SAB28;
+        track_type:                     SABN;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_PASSENGERS);
@@ -122,7 +122,7 @@ item (FEAT_TRAINS,metro_1st_car_elec) {
         introduction_date:              date(2000,01,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
-        track_type:                     SAB28;
+        track_type:                     SABN;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_PASSENGERS);
@@ -179,7 +179,7 @@ item (FEAT_TRAINS,metro_car_3rd) {
         introduction_date:              date(1960,01,01);
         model_life:                     VEHICLE_NEVER_EXPIRES;
         vehicle_life:                   30;
-        track_type:                     SAC3;
+        track_type:                     SAB3;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_PASSENGERS);

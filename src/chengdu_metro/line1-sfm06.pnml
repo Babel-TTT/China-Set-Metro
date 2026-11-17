@@ -100,7 +100,7 @@ item (FEAT_TRAINS, chengdu1_sfm06) {
         model_life:                     60;
         retire_early:                   35;
         vehicle_life:                   35;
-        track_type:                     SAAd;
+        track_type:                     SABd;
 
         // Cargo
         refittable_cargo_classes:       bitmask(CC_PASSENGERS);
